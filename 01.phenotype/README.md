@@ -101,17 +101,17 @@
 
 ```mermaid
 flowchart TD
-  A[Load CLSA baseline/FUP1/FUP2\n+ SQC inputs] --> B[Apply SQC & ancestry filters\nbuild Participant objects]
+  A[Load CLSA baseline/FUP1/FUP2<br/>+ SQC inputs] --> B[Apply SQC & ancestry filters<br/>build Participant objects]
   B --> C["Compute T2D flags: t1d_flag, t2d_flag, ages, duration"]
-  C --> D[Compute complications\nOPHTH, RENAL, CARDIO, CEREBRO\n+ MICRO/MACRO/MICROMACRO]
-  D --> E[Assign MAIN & SENS2Y\ncase/control/NA per trait]
+  C --> D[Compute complications<br/>OPHTH, RENAL, CARDIO, CEREBRO<br/>+ MICRO/MACRO/MICROMACRO]
+  D --> E[Assign MAIN & SENS2Y<br/>case/control/NA per trait]
   E --> F[Write participant_harmonized.tsv.gz]
-  E --> G[Build covariate base\nage, t2d_duration, sex,\nPCs, center/batch dummies]
-  G --> H[Loop over sex strata\nboth / male / female]
-  H --> I[For each trait:\ncompute counts, manifest row]
+  E --> G[Build covariate base<br/>age, t2d_duration, sex,<br/>PCs, center/batch dummies]
+  G --> H[Loop over sex strata<br/>both / male / female]
+  H --> I[For each trait:<br/>compute counts, manifest row]
   I --> J{ready_for_gwas?}
   J -->|no| K[Skip GWAS files]
-  J -->|yes| L[Write pheno/covar/keep files\nand update regenie_targets.txt]
+  J -->|yes| L[Write pheno/covar/keep files<br/>and update regenie_targets.txt]
 ```
 
 ## Current CLSA-specific assumptions / limitations
