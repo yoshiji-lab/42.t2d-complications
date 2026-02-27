@@ -102,7 +102,7 @@
 ```mermaid
 flowchart TD
   A[Load CLSA baseline/FUP1/FUP2\n+ SQC inputs] --> B[Apply SQC & ancestry filters\nbuild Participant objects]
-  B --> C[Compute T2D flags\n(t1d_flag, t2d_flag,\nages, duration)]
+  B --> C["Compute T2D flags: t1d_flag, t2d_flag, ages, duration"]
   C --> D[Compute complications\nOPHTH, RENAL, CARDIO, CEREBRO\n+ MICRO/MACRO/MICROMACRO]
   D --> E[Assign MAIN & SENS2Y\ncase/control/NA per trait]
   E --> F[Write participant_harmonized.tsv.gz]
