@@ -21,6 +21,17 @@
   - covariates: age at baseline, **T2D duration**, sex (overall only), PCs 1–10, center dummies, batch dummies.
 - Writes a manifest with case/control counts and a `regenie_targets.txt` list.
 
+## Case and control definitions
+
+Per the T2D complications meta-analysis design (T2DGGI collaboration):
+
+- **Cases**: T2D patients **with** the specific complication (ascertained by clinical evaluation, self-report, or ICD codes).
+- **Controls**: T2D patients **without** that complication.
+
+In this pipeline, controls are defined more strictly: **control-eligible** individuals are T2D patients with **no complications in any domain** (OPHTH, RENAL, CARDIO, CEREBRO) and with T2D duration ≥ 2 years. That control pool is **shared** across all complication traits. Because many T2D patients have at least one complication (e.g. hypertension/CARDIO), the shared control set can be smaller than the number of cases for a given trait.
+
+**It is expected that some traits may have more cases than controls**; that is consistent with the design and not an error.
+
 ## Phenotype curation flow (high level)
 
 ### Stepwise description
