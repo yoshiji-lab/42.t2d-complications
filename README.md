@@ -25,6 +25,13 @@ Reference project used for layout and scripts:
 
 ## Current workflow
 
+```mermaid
+flowchart TD
+  A[01.phenotype: curate phenotypes] --> B[02.filter_impute: BGEN to PGEN]
+  B --> C[01.step1: Regenie step 1]
+  C --> D[03.step2: Regenie step 2]
+```
+
 1. Curate phenotypes and write Regenie input files
 
 ```bash
