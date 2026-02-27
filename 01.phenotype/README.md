@@ -114,6 +114,70 @@ flowchart TD
   J -->|yes| L[Write pheno/covar/keep files<br/>and update regenie_targets.txt]
 ```
 
+### Comprehensive flowchart (code-aligned)
+
+The following diagram reflects the order of operations in `01.curate_t2d_complications.py`: data load, QC, T2D/complication derivation, case–control assignment, and output writing.
+
+```mermaid
+flowchart TD
+  subgraph load["1. Load inputs"]
+    L1[Load baseline CSV<br/>selected columns]
+    L2[Load FUP1 CSV]
+    L3[Load FUP2 CSV]
+    L4[Load SQC file<br/>clsa_sqc_v3.txt]
+  end
+
+  subgraph join["2. Build participants"]
+    J1[For each entity_id in baseline]
+    J2[Match gwasid to SQC<br/>ADM_GWAS3_COM to ADM_GWAS_COM]
+    J3[Attach baseline, FUP1, FUP2, SQC row]
+    J4[Derive sex_regenie from SEX_ASK_COM]
+  end
+
+  subgraph qc["3. QC filters"]
+    Q1[all_covar_present]
+    Q2[pca.cluster.id equals target]
+    Q3[in.kinship 0, in.hetmiss 0]
+    Q4[chromosomal.sex vs reported sex]
+  end
+
+  subgraph t2d["4. T2D flags"]
+    T1["DIA_TYPE: 1 = T1D, 2 = T2D"]
+    T2[Optional: diabetes + meds or HbA1c at least 6.5]
+    T3[t2d_age, last_obs_age, t2d_duration]
+  end
+
+  subgraph comp["5. Complication domains"]
+    C1[OPHTH: DIA_DIABRT FUP1/FUP2]
+    C2[RENAL: kidney + dialysis CCC_*]
+    C3[CARDIO: heart, angina, MI, CAB, PVD, HBP]
+    C4[CEREBRO: CVA, TIA, CVAFX]
+    C5[MICRO = OPHTH or RENAL<br/>MACRO = CARDIO or CEREBRO<br/>NEURO = unavailable]
+  end
+
+  subgraph assign["6. Case/control per trait"]
+    A1[control_eligible: T2D, no comp, duration at least 2y]
+    A2[MAIN case: comp present, comp_age at or after t2d_age]
+    A3[SENS2Y case: MAIN and comp_age at least 2y after t2d_age]
+    A4[Per-trait: 1 case, 0 control, NA exclude]
+  end
+
+  subgraph out["7. Outputs"]
+    O1[participant_harmonized.tsv.gz]
+    O2[covar_base: age, t2d_duration, sex, PCs, center/batch dummies]
+    O3[Loop strata: both, male, female]
+    O4[Per trait: counts, manifest row, ready_for_gwas]
+    O5[If ready: pheno, covar, keep files + regenie_targets.txt]
+  end
+
+  load --> join
+  join --> qc
+  qc --> t2d
+  t2d --> comp
+  comp --> assign
+  assign --> out
+```
+
 ## Current CLSA-specific assumptions / limitations
 
 - **T2D ascertainment**
