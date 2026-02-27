@@ -1,0 +1,77 @@
+concept	wave	variable	notes
+id	baseline	entity_id	Participant ID used to join waves
+id	baseline	ADM_GWAS3_COM	GWAS ID used to join SQC/genotype metadata
+covariate	baseline	SEX_ASK_COM	Self-reported sex (M/F)
+covariate	baseline	AGE_NMBR_COM	Baseline age (used in covariates)
+covariate	baseline	GEOSTRATA_COM	Recruitment center/strata (one-hot encoded)
+sqc	genotype	ADM_GWAS_COM	Matches baseline ADM_GWAS3_COM
+sqc	genotype	batch	Genotyping batch (one-hot encoded)
+sqc	genotype	chromosomal.sex	Sex concordance filter
+sqc	genotype	pca.cluster.id	Ancestry cluster filter (default 4=EUR from OA project)
+sqc	genotype	in.kinship	Kinship QC filter
+sqc	genotype	in.hetmiss	Het/missingness QC filter
+sqc	genotype	ePC1-ePC10	GWAS covariates (renamed PC1-PC10)
+T2D	baseline	DIA_DIAB_COM	Diabetes/borderline/high blood sugar self-report
+T2D	baseline	DIA_TYPE_COM	Type I/II/Neither
+T2D	baseline	DIA_AGE_NB_COM	Age at diabetes diagnosis
+T2D	baseline	DIA_MED_COM	Diabetes medication (current)
+T2D	baseline	BLD_HBA1c_COM	Optional WHO-style support (lenient mode)
+T2D	fup1	DIA_DIAB_COF1	Diabetes self-report
+T2D	fup1	DIA_TYPE_COF1	Type I/II/Neither
+T2D	fup1	DIA_MED_COF1	Diabetes medication
+T2D	fup2	DIA_DIAB_COF2	Diabetes self-report
+T2D	fup2	DIA_AGE_NB_COF2	Age at diabetes diagnosis
+T2D	fup2	DIA_MED_COF2	Diabetes medication
+ophth	fup1	DIA_DIABRT_COF1	Diabetic retinopathy self-report
+ophth_age	fup1	CCC_DIAB_DRAGE_NB_COF1	Age at diabetic retinopathy diagnosis
+ophth	fup2	DIA_DIABRT_COF2	Diabetic retinopathy self-report
+ophth_age	fup2	DIA_DIABRTAGE_NB_COF2	Age at diabetic retinopathy diagnosis
+renal	baseline	CCC_KIDN_COM	Kidney disease/failure self-report (broad)
+renal	baseline	CCC_DITYP_COM	Dialysis (hemo/peritoneal)
+renal	fup1	CCC_KIDN_COF1	Kidney disease/failure self-report (broad)
+renal_age	fup1	CCC_KIDNAGE_NB_COF1	Age at kidney disease diagnosis
+renal	fup1	CCC_DITYP_COF1	Dialysis (hemo/peritoneal)
+renal	fup2	CCC_KIDN_COF2	Kidney disease/failure self-report (broad)
+renal_age	fup2	CCC_KIDNAGE_NB_COF2	Age at kidney disease diagnosis
+renal	fup2	CCC_DITYP_COF2	Dialysis (hemo/peritoneal)
+cardio	baseline	CCC_HEART_COM	Heart disease (incl CHF)
+cardio	baseline	CCC_ANGI_COM	Angina
+cardio	baseline	CCC_AMI_COM	Heart attack / MI
+cardio	baseline	IHD_CAB_COM	CAB/angioplasty/stent/balloon angioplasty
+cardio	baseline	CCC_PVD_COM	Peripheral vascular disease / poor circulation
+cardio	baseline	CCC_HBP_COM	High blood pressure / hypertension
+cardio_age	baseline	IHD_ANGIAGE_NB_COM	Age of angina diagnosis
+cardio_age	baseline	IHD_AMIAGE_NB_COM	Age of MI diagnosis
+cardio	fup1	CCC_HEART_COF1	Heart disease (incl CHF)
+cardio_age	fup1	CCC_HEARTAGE_NB_COF1	Age of heart disease diagnosis
+cardio	fup1	CCC_ANGI_COF1	Angina
+cardio_age	fup1	IHD_ANGIAGE_NB_COF1	Age of angina diagnosis
+cardio	fup1	CCC_AMI_COF1	Heart attack / MI
+cardio_age	fup1	IHD_AMIAGE_NB_COF1	Age of MI diagnosis
+cardio	fup1	IHD_CAB_COF1	CAB/angioplasty/stent/balloon angioplasty
+cardio	fup1	CCC_PVD_COF1	Peripheral vascular disease / poor circulation
+cardio	fup1	CCC_HBP_COF1	High blood pressure / hypertension
+cardio_age	fup1	CCC_PVDAGE_NB_COF1	Age of PVD diagnosis
+cardio	fup2	CCC_HEART_COF2	Heart disease (code 11 = yes confirmed prior waves)
+cardio_age	fup2	CCC_HEARTAGE_NB_COF2	Age of heart disease diagnosis
+cardio	fup2	CCC_ANGI_COF2	Angina
+cardio_age	fup2	IHD_ANGIAGE_NB_COF2	Age of angina diagnosis
+cardio	fup2	CCC_AMI_COF2	Heart attack / MI
+cardio_age	fup2	IHD_AMIAGE_NB_COF2	Age of MI diagnosis
+cardio	fup2	IHD_CAB_COF2	CAB/angioplasty/stent/balloon angioplasty
+cardio	fup2	(CCC_PVD_COF2 not found)	PVD variable not identified in reviewed FUP2 CoPv3 dictionary
+cerebro	baseline	CCC_CVA_COM	Stroke/CVA
+cerebro	baseline	CCC_TIA_COM	Ministroke/TIA
+cerebro	baseline	CCC_CVAFX_COM	Effects of stroke/TIA
+cerebro_age	baseline	STR_CVAAGE_NB_COM	Age of stroke diagnosis
+cerebro_age	baseline	STR_TIAAGE_NB_COM	Age of TIA diagnosis
+cerebro	fup1	CCC_CVA_COF1	Stroke/CVA
+cerebro	fup1	CCC_TIA_COF1	Ministroke/TIA
+cerebro	fup1	CCC_CVAFX_COF1	Effects of stroke/TIA
+cerebro_age	fup1	STR_CVAAGE_NB_COF1	Age of stroke diagnosis
+cerebro_age	fup1	STR_TIAAGE_NB_COF1	Age of TIA diagnosis
+cerebro	fup2	CCC_CVA_COF2	Stroke/CVA
+cerebro	fup2	CCC_TIA_COF2	Ministroke/TIA
+cerebro	fup2	CCC_CVAFX_COF2	Effects of stroke/TIA
+cerebro_age	fup2	STR_CVAAGE_NB_COF2	Age of stroke diagnosis
+cerebro_age	fup2	STR_TIAAGE_NB_COF2	Age of TIA diagnosis

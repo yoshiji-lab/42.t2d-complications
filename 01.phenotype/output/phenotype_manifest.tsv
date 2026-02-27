@@ -1,0 +1,49 @@
+analysis_id	ancestry	sex_stratum	trait	trait_base	sensitivity	available	n_controls	n_cases	n_total	ready_for_gwas	notes
+EUR_both_OPHTH_MAIN	EUR	both	OPHTH_MAIN	OPHTH	0	1	403	70	473	1	Retinopathy-only proxy; broader ophthalmic (cataract/glaucoma/macular edema) not captured
+EUR_both_NEURO_MAIN	EUR	both	NEURO_MAIN	NEURO	0	0	403	0	403	0	Neurological diabetic complication phenotype not identified in current CLSA variable mapping
+EUR_both_RENAL_MAIN	EUR	both	RENAL_MAIN	RENAL	0	1	403	181	584	1	Self-report kidney disease/failure + dialysis proxy; not strict DKD/CKD by lab criteria
+EUR_both_CARDIO_MAIN	EUR	both	CARDIO_MAIN	CARDIO	0	1	403	1569	1972	1	
+EUR_both_CEREBRO_MAIN	EUR	both	CEREBRO_MAIN	CEREBRO	0	1	403	228	631	1	
+EUR_both_MICRO_MAIN	EUR	both	MICRO_MAIN	MICRO	0	1	403	233	636	1	Micro excludes neurological (unavailable in CLSA)
+EUR_both_MACRO_MAIN	EUR	both	MACRO_MAIN	MACRO	0	1	403	1615	2018	1	
+EUR_both_MICROMACRO_MAIN	EUR	both	MICROMACRO_MAIN	MICROMACRO	0	1	403	1660	2063	1	
+EUR_both_OPHTH_SENS2Y	EUR	both	OPHTH_SENS2Y	OPHTH	1	1	403	60	463	1	Retinopathy-only proxy; broader ophthalmic (cataract/glaucoma/macular edema) not captured
+EUR_both_NEURO_SENS2Y	EUR	both	NEURO_SENS2Y	NEURO	1	0	403	0	403	0	Neurological diabetic complication phenotype not identified in current CLSA variable mapping
+EUR_both_RENAL_SENS2Y	EUR	both	RENAL_SENS2Y	RENAL	1	1	403	130	533	1	Self-report kidney disease/failure + dialysis proxy; not strict DKD/CKD by lab criteria
+EUR_both_CARDIO_SENS2Y	EUR	both	CARDIO_SENS2Y	CARDIO	1	1	403	407	810	1	
+EUR_both_CEREBRO_SENS2Y	EUR	both	CEREBRO_SENS2Y	CEREBRO	1	1	403	187	590	1	
+EUR_both_MICRO_SENS2Y	EUR	both	MICRO_SENS2Y	MICRO	1	1	403	174	577	1	Micro excludes neurological (unavailable in CLSA)
+EUR_both_MACRO_SENS2Y	EUR	both	MACRO_SENS2Y	MACRO	1	1	403	524	927	1	
+EUR_both_MICROMACRO_SENS2Y	EUR	both	MICROMACRO_SENS2Y	MICROMACRO	1	1	403	626	1029	1	
+EUR_male_OPHTH_MAIN	EUR	male	OPHTH_MAIN	OPHTH	0	1	227	50	277	1	Retinopathy-only proxy; broader ophthalmic (cataract/glaucoma/macular edema) not captured
+EUR_male_NEURO_MAIN	EUR	male	NEURO_MAIN	NEURO	0	0	227	0	227	0	Neurological diabetic complication phenotype not identified in current CLSA variable mapping
+EUR_male_RENAL_MAIN	EUR	male	RENAL_MAIN	RENAL	0	1	227	103	330	1	Self-report kidney disease/failure + dialysis proxy; not strict DKD/CKD by lab criteria
+EUR_male_CARDIO_MAIN	EUR	male	CARDIO_MAIN	CARDIO	0	1	227	929	1156	1	
+EUR_male_CEREBRO_MAIN	EUR	male	CEREBRO_MAIN	CEREBRO	0	1	227	140	367	1	
+EUR_male_MICRO_MAIN	EUR	male	MICRO_MAIN	MICRO	0	1	227	142	369	1	Micro excludes neurological (unavailable in CLSA)
+EUR_male_MACRO_MAIN	EUR	male	MACRO_MAIN	MACRO	0	1	227	958	1185	1	
+EUR_male_MICROMACRO_MAIN	EUR	male	MICROMACRO_MAIN	MICROMACRO	0	1	227	988	1215	1	
+EUR_male_OPHTH_SENS2Y	EUR	male	OPHTH_SENS2Y	OPHTH	1	1	227	42	269	1	Retinopathy-only proxy; broader ophthalmic (cataract/glaucoma/macular edema) not captured
+EUR_male_NEURO_SENS2Y	EUR	male	NEURO_SENS2Y	NEURO	1	0	227	0	227	0	Neurological diabetic complication phenotype not identified in current CLSA variable mapping
+EUR_male_RENAL_SENS2Y	EUR	male	RENAL_SENS2Y	RENAL	1	1	227	68	295	1	Self-report kidney disease/failure + dialysis proxy; not strict DKD/CKD by lab criteria
+EUR_male_CARDIO_SENS2Y	EUR	male	CARDIO_SENS2Y	CARDIO	1	1	227	265	492	1	
+EUR_male_CEREBRO_SENS2Y	EUR	male	CEREBRO_SENS2Y	CEREBRO	1	1	227	110	337	1	
+EUR_male_MICRO_SENS2Y	EUR	male	MICRO_SENS2Y	MICRO	1	1	227	101	328	1	Micro excludes neurological (unavailable in CLSA)
+EUR_male_MACRO_SENS2Y	EUR	male	MACRO_SENS2Y	MACRO	1	1	227	325	552	1	
+EUR_male_MICROMACRO_SENS2Y	EUR	male	MICROMACRO_SENS2Y	MICROMACRO	1	1	227	387	614	1	
+EUR_female_OPHTH_MAIN	EUR	female	OPHTH_MAIN	OPHTH	0	1	176	20	196	1	Retinopathy-only proxy; broader ophthalmic (cataract/glaucoma/macular edema) not captured
+EUR_female_NEURO_MAIN	EUR	female	NEURO_MAIN	NEURO	0	0	176	0	176	0	Neurological diabetic complication phenotype not identified in current CLSA variable mapping
+EUR_female_RENAL_MAIN	EUR	female	RENAL_MAIN	RENAL	0	1	176	78	254	1	Self-report kidney disease/failure + dialysis proxy; not strict DKD/CKD by lab criteria
+EUR_female_CARDIO_MAIN	EUR	female	CARDIO_MAIN	CARDIO	0	1	176	640	816	1	
+EUR_female_CEREBRO_MAIN	EUR	female	CEREBRO_MAIN	CEREBRO	0	1	176	88	264	1	
+EUR_female_MICRO_MAIN	EUR	female	MICRO_MAIN	MICRO	0	1	176	91	267	1	Micro excludes neurological (unavailable in CLSA)
+EUR_female_MACRO_MAIN	EUR	female	MACRO_MAIN	MACRO	0	1	176	657	833	1	
+EUR_female_MICROMACRO_MAIN	EUR	female	MICROMACRO_MAIN	MICROMACRO	0	1	176	672	848	1	
+EUR_female_OPHTH_SENS2Y	EUR	female	OPHTH_SENS2Y	OPHTH	1	1	176	18	194	0	Retinopathy-only proxy; broader ophthalmic (cataract/glaucoma/macular edema) not captured
+EUR_female_NEURO_SENS2Y	EUR	female	NEURO_SENS2Y	NEURO	1	0	176	0	176	0	Neurological diabetic complication phenotype not identified in current CLSA variable mapping
+EUR_female_RENAL_SENS2Y	EUR	female	RENAL_SENS2Y	RENAL	1	1	176	62	238	1	Self-report kidney disease/failure + dialysis proxy; not strict DKD/CKD by lab criteria
+EUR_female_CARDIO_SENS2Y	EUR	female	CARDIO_SENS2Y	CARDIO	1	1	176	142	318	1	
+EUR_female_CEREBRO_SENS2Y	EUR	female	CEREBRO_SENS2Y	CEREBRO	1	1	176	77	253	1	
+EUR_female_MICRO_SENS2Y	EUR	female	MICRO_SENS2Y	MICRO	1	1	176	73	249	1	Micro excludes neurological (unavailable in CLSA)
+EUR_female_MACRO_SENS2Y	EUR	female	MACRO_SENS2Y	MACRO	1	1	176	199	375	1	
+EUR_female_MICROMACRO_SENS2Y	EUR	female	MICROMACRO_SENS2Y	MICROMACRO	1	1	176	239	415	1	
